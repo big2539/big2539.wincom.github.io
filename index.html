@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover">
+    <title>🧧 WINNERSLOT88 แจกคูปองฟรี! 🧧</title>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;600;700;800&display=swap');
+        body {
+            font-family: 'Prompt', sans-serif;
+            text-align: center;
+            padding: 20px;
+            /* พื้นหลังไล่เฉดสีดำเข้ม แดง และทอง ให้เข้ากับธีม */
+            background: linear-gradient(135deg, #1f0505 0%, #3a0808 50%, #1f0505 100%);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            overflow: hidden;
+        }
+        .container {
+            max-width: 450px;
+            width: 90%;
+            background-color: rgba(45, 0, 0, 0.95); /* กล่องเนื้อหาสีแดงเข้มโปร่งแสง */
+            padding: 35px;
+            border-radius: 15px;
+            border: 2px solid #FFD700; /* กรอบสีทอง */
+            box-shadow: 0 0 30px rgba(255, 0, 0, 0.6); /* เงาสีแดง */
+        }
+        .top-text {
+            /* ข้อความด้านบนปุ่ม */
+            font-size: 20px;
+            font-weight: 600;
+            color: #FF6347; /* สีส้มแดง (Tomato) */
+            margin-bottom: 25px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.9);
+        }
+        .share-button {
+            /* ปุ่ม "กดแชร์ให้เพื่อน/กลุ่ม" */
+            background: linear-gradient(180deg, #FF0000, #B22222); /* สีแดงสดไล่เฉด */
+            color: white;
+            border: 3px solid #FFD700; /* กรอบสีทอง */
+            padding: 18px 45px;
+            text-align: center;
+            display: inline-block;
+            font-size: 24px;
+            margin: 15px 0;
+            cursor: pointer;
+            border-radius: 50px;  
+            font-weight: 800;
+            box-shadow: 0 8px #8B0000; /* เงาสีแดงเข้มจัด */
+            transition: all 0.2s;
+            letter-spacing: 1px;
+        }
+        .share-button:active {
+            box-shadow: 0 2px #8B0000;
+            transform: translateY(6px);
+        }
+        .status-message {
+            margin-top: 25px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #00FF7F; /* สีเขียวสว่างสำหรับสถานะสำเร็จ */
+        }
+        .bottom-text {
+            /* ข้อความด้านล่างปุ่ม */
+            color: #FFD700; /* สีทอง */
+            margin-top: 30px;
+            font-size: 16px;
+            background-color: #4B0000;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 5px solid #FFD700;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p class="top-text">🔥 กิจกรรมพิเศษ! แชร์รับรหัสคูปองฟรีวันนี้! ห้ามพลาด! 🔥</p>
+
+        <button class="share-button" id="btnShare" onclick="shareFlexMessage()">
+            🎁 กดแชร์ให้เพื่อน/กลุ่ม
+        </button>
+
+        <div id="status" class="status-message" style="display: none;"></div>
+
+        <p class="bottom-text">✅ แชร์สำเร็จแล้ว! รีบแคปภาพหน้าจอส่งให้แอดมินเพื่อรับคูปองฟรี</p>
+    </div>
+
+    <script>
+        // LIFF ID ของคุณ
+        const LIFF_ID = "2008464608-oLPw9DrO"; 
+
+        // โครงสร้าง Flex Message พร้อมปรับสีพื้นหลังให้เข้ากับรูปภาพ
+        const flexMessage = {
+            "type": "bubble",
+            "hero": {
+                "type": "image",
+                // URL รูปภาพที่คุณระบุ
+                "url": "https://img2.pic.in.th/pic/80ad6a88-f8ce-4d80-8e6c-d62b95b4c193.jpg",
+                "size": "full",
+                "aspectRatio": "3:2", 
+                "aspectMode": "cover",
+                "action": {
+                    "type": "uri",
+                    "uri": "https://winnerslot88.com"
+                }
+            },
+            "body": {
+                "type": "box",
+                "layout": "vertical",
+                "backgroundColor": "#330000", // สีพื้นหลัง Body (แดงเข้ม)
+                "contents": [
+                    {
+                        "type": "text",
+                        "text": "🎉 WINNERSLOT88 แจกคูปองฟรี!",
+                        "weight": "bold",
+                        "size": "lg", 
+                        "align": "center",
+                        "color": "#FFD700" // สีทอง
+                    },
+                    {
+                        "type": "text",
+                        "text": "แชร์กิจกรรมนี้ รับรหัสคูปองไปเลยฟรีๆ ห้ามพลาด!",
+                        "size": "sm",
+                        "margin": "md", 
+                        "wrap": true,
+                        "align": "center",
+                        "color": "#FFFFFF"
+                    }
+                ]
+            },
+            "footer": {
+                "type": "box",
+                "layout": "vertical",
+                "spacing": "sm",
+                "backgroundColor": "#1a0000", // สีพื้นหลัง Footer (ดำเข้ม)
+                "contents": [
+                    {
+                        "type": "button",
+                        "style": "primary",
+                        "color": "#FF0000", // สีแดงสด
+                        "action": {
+                            "type": "uri",
+                            "label": "🧧รับรหัสคูปองฟรี🧧",
+                            "uri": "https://lin.ee/jKY0qzH" // URL ปุ่มที่ 1
+                        }
+                    },
+                    {
+                        "type": "button",
+                        "style": "secondary",
+                        "color": "#FFD700", // สีทอง
+                        "action": {
+                            "type": "uri",
+                            "label": "🎰ช่องทางรวย🎰",
+                            "uri": "https://winnerslot88.com" // URL ปุ่มที่ 2
+                        }
+                    }
+                ]
+            }
+        };
+
+        // ฟังก์ชันเริ่มต้น LIFF และ Login
+        function initializeLiff() {
+            liff.init({
+                liffId: LIFF_ID
+            }).then(() => {
+                if (!liff.isLoggedIn() && !liff.isInClient()) {
+                    liff.login();
+                }
+            }).catch((err) => {
+                console.error("LIFF initialization failed", err);
+                document.getElementById('status').style.display = 'block';
+                document.getElementById('status').innerHTML = '⚠️ LIFF ไม่สามารถเริ่มต้นได้';
+            });
+        }
+
+        // ฟังก์ชันสำหรับแชร์ Flex Message
+        async function shareFlexMessage() {
+            if (!liff.isLoggedIn()) {
+                liff.login();
+                return;
+            }
+
+            if (!liff.isApiAvailable('shareTargetPicker')) {
+                alert('ฟังก์ชัน Share Target Picker ไม่พร้อมใช้งานในเวอร์ชัน LINE ของคุณ');
+                return;
+            }
+
+            try {
+                const result = await liff.shareTargetPicker(
+                    [
+                        {
+                            "type": "flex",
+                            "altText": "WINNERSLOT88 แจกคูปองฟรี! ไปรับกันเล้ย!",
+                            "contents": flexMessage
+                        }
+                    ],
+                    { isMultiple: true }
+                );
+
+                document.getElementById('status').style.display = 'block';
+
+                if (result) {
+                    document.getElementById('status').innerHTML = '✅ “แชร์สำเร็จ! กรุณาแคปภาพส่งแอดมิน”';
+                } else {
+                    document.getElementById('status').innerHTML = '❌ การแชร์ถูกยกเลิก';
+                }
+
+            } catch (error) {
+                console.error("Error sharing message", error);
+                document.getElementById('status').style.display = 'block';
+                document.getElementById('status').innerHTML = '⚠️ เกิดข้อผิดพลาดในการแชร์';
+            }
+        }
+
+        // เริ่มต้น LIFF เมื่อหน้าเว็บโหลด
+        window.onload = initializeLiff;
+    </script>
+</body>
+</html>
